@@ -1,0 +1,8 @@
+on post-fs
+    insmod /vendor/lib/modules/sunwave_fp.ko
+
+on post-fs-data
+#add for sunwave fingerprint
+    chmod 660 /dev/sunwave_fp
+    chown system system /dev/sunwave_fp
+
